@@ -4,6 +4,7 @@
 		<edate>1471258186705</edate>
 		<id>6</id>
 		<mid0>7</mid0>
+		<mid1>7</mid1>
 		<nme>Position #name# #eqLogic_id#</nme>
 		<Loc sr="con0">
 			<cname>coordonée</cname>
@@ -17,7 +18,8 @@
 		<cdate>1471258111171</cdate>
 		<edate>1471258172228</edate>
 		<id>7</id>
-		<nme>position #name# #eqLogic_id#</nme>
+		<pri>100</pri>
+		<nme>Position #name# #eqLogic_id#</nme>
 		<Action sr="act0" ve="7">
 			<code>118</code>
 			<Str sr="arg0" ve="3">#network::external#</Str>

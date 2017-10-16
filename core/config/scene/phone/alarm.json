@@ -1,0 +1,20 @@
+{
+    "alarm": {
+            "name" : "Réveil",
+            "groupe" : "Téléphone",
+            "description" : "Envoi un évènement lors de l'arret du réveil",
+            "profil" :[
+                "phone/alarm.prf.xml"
+            ],
+            "commands": [
+                {
+                    "name": "Réveil",
+                    "type": "info",
+                    "subtype": "binary",
+                    "isVisible": 1,
+                    "isHistorized": 0,
+                    "logicalId": "alarm"
+                }
+            ]
+    }
+}
