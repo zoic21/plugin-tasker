@@ -1,0 +1,11 @@
+{
+	"id" : "tasker",
+	"name" : "Tasker",
+	"description" : "Plugin Tasker",
+	"licence" : "AGPL",
+	"author" : "Loïc",
+	"require" : "3.0",
+	"category" : "programming",
+	"changelog" : "https://github.com/jeedom/plugin-tasker/blob/stable/doc/#language#/changelog.asciidoc",
+	"documentation" : "https://github.com/jeedom/plugin-tasker/blob/stable/doc/#language#/index.asciidoc"
+}
