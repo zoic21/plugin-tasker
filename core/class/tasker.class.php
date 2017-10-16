@@ -119,7 +119,7 @@ class tasker extends eqLogic {
 				if (isset($parameter['default'])) {
 					$default = $parameter['default'];
 				}
-				$replace['#' . $key . '#'] = $this->getConfiguration('tasker::' . $key, $default);
+				$replace['#' . $key . '#'] = $this->getConfiguration('tasker::' . $_scene . '::' . $key, $default);
 			}
 		}
 

@@ -1,0 +1,23 @@
+{
+    "wifi": {
+            "name" : "Wifi",
+            "groupe" : "Téléphone",
+            "description" : "Envoi le nom du wifi auquel le téléphone vient de se connecter",
+            "profil" :[
+                "wifi/wifi.prf.xml"
+            ],
+            "commands": [
+                {
+                    "name": "Wifi",
+                    "type": "info",
+                    "subtype": "string",
+                    "isVisible": 1,
+                    "isHistorized": 0,
+                    "logicalId": "wifi"
+                }
+            ],
+            "configuration":{
+                "SSID" : { "name" : "SSID", "type" : "input" , "default":"", "description" : "Nom du réseaux wifi. Si vide alors il prends tous les noms" }
+            }
+    }
+}

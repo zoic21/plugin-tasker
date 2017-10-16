@@ -41,19 +41,19 @@ foreach ($config['configuration'] as $key => $parameter) {
 	if (isset($parameter['default'])) {
 		$default = $parameter['default'];
 	}
-	$default = $tasker->getConfiguration('tasker::' . $key, $default);
+	$default = $tasker->getConfiguration('tasker::' . init('scene') . '::' . $key, $default);
 	echo '<div class="form-group">';
 	echo '<label class="col-sm-2 control-label">' . $parameter['name'] . '</label>';
 	echo '<div class="col-sm-3">';
 	switch ($parameter['type']) {
 		case 'color':
-			echo '<input type="color" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="tasker::' . $key . '" value="' . $default . '" />';
+			echo '<input type="color" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="tasker::' . init('scene') . '::' . $key . '" value="' . $default . '" />';
 			break;
 		case 'input':
-			echo '<input class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="tasker::' . $key . '" value="' . $default . '" />';
+			echo '<input class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="tasker::' . init('scene') . '::' . $key . '" value="' . $default . '" />';
 			break;
 		case 'number':
-			echo '<input type="number" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="tasker::' . $key . '" value="' . $default . '" />';
+			echo '<input type="number" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="tasker::' . init('scene') . '::' . $key . '" value="' . $default . '" />';
 			break;
 	}
 	echo '</div>';
