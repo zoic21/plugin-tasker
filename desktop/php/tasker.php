@@ -105,17 +105,16 @@ foreach (object::all() as $object) {
         <input type="password" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="autoremote::password" />
       </div>
     </div>
-
   </fieldset>
 </form>
-
 
 </div>
 <div role="tabpanel" class="tab-pane" id="scenetab">
  <br/>
  <form class="form-horizontal">
   <fieldset>
-    <?php
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <?php
 $groups = array();
 foreach (tasker::sceneParameters() as $key => $info) {
 	if (isset($info['groupe'])) {
@@ -128,13 +127,23 @@ foreach (tasker::sceneParameters() as $key => $info) {
 	}
 }
 ksort($groups);
+$collapseId = 0;
 foreach ($groups as $group) {
 	usort($group, function ($a, $b) {
 		return strcmp($a['name'], $b['name']);
 	});
 	foreach ($group as $key => $info) {
 		if ($key == 0) {
-			echo '<legend>{{' . $info['groupe'] . '}}</legend>';
+			echo '<div class="panel panel-default">';
+			echo '<div class="panel-heading" role="tab" id="headingOne">';
+			echo '<h4 class="panel-title">';
+			echo '<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' . $collapseId . '" aria-expanded="true" aria-controls="collapseOne">';
+			echo $info['groupe'];
+			echo '</a>';
+			echo '</h4>';
+			echo '</div>';
+			echo '<div id="collapse' . $collapseId . '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">';
+			echo '<div class="panel-body">';
 		}
 		echo '<div class="form-group">';
 		echo '<label class="col-sm-3 control-label">' . $info['name'] . '</label>';
@@ -150,9 +159,16 @@ foreach ($groups as $group) {
 		echo $info['description'];
 		echo '</div>';
 		echo '</div>';
+		if ($key == count($group) - 1) {
+			echo '</div>';
+			echo '</div>';
+			echo '</div>';
+			$collapseId++;
+		}
 	}
 }
 ?>
+</div>
 </fieldset>
 </form>
 

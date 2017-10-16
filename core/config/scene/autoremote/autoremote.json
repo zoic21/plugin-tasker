@@ -1,7 +1,7 @@
 {
-    "bluetooth": {
+    "autoremote": {
             "name" : "Autoremote",
-            "groupe" : "Bluetooth",
+            "groupe" : "Autoremote",
             "description" : "Permet de déclencher des action sur les boutons lors de notification (utiliser dans les scénarios pour ask)",
             "profil" :[
                 "autoremote/autoremote.prf.xml"

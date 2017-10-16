@@ -1,7 +1,7 @@
 {
     "bluetooth": {
-            "name" : "Nom bluetooth",
-            "groupe" : "Bluetooth",
+            "name" : "Bluetooth",
+            "groupe" : "Réseaux",
             "description" : "Nom de l'appareil bluetooth connecté",
             "profil" :[
                 "bluetooth/bluetooth.prf.xml"

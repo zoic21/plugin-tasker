@@ -1,7 +1,7 @@
 {
     "wifi": {
             "name" : "Wifi",
-            "groupe" : "Téléphone",
+            "groupe" : "Réseaux",
             "description" : "Envoi le nom du wifi auquel le téléphone vient de se connecter",
             "profil" :[
                 "wifi/wifi.prf.xml"
